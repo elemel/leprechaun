@@ -1,0 +1,94 @@
+<html>
+  <head>
+    <title>Leprechaun</title>
+    <style type="text/css">
+        html, body {
+            color: black;
+            background-color: white;
+            font-family: sans-serif;
+        }
+
+        body {
+            width: 40em;
+            margin: 1em auto;
+        }
+
+        img {
+          border: 0;
+        }
+
+        #footer {
+            font-size: small;
+            border-top: 1px solid;
+        }
+
+        h1, h2, h3, dt {
+            color: green;
+            font-weight: bold;
+        }
+    </style>
+  </head>
+  <body>
+    <h1>Leprechaun</h1>
+    <p>Leprechaun is a public-domain mud library for
+    <a href="http://www.dworkin.nl/dgd/"><acronym title="Dworkin's Generic Driver">DGD</acronym></a>
+    and its kernel library. So far, the Leprechaun system library has the
+    following features:</p>
+    <dl>
+      <dt>Middle-weight Objects</dt>
+      <dd>Light-weight objects that emulate some properties of persistent
+      objects, notably callouts. They can be used for the bulk of items in a
+      mud.</dd>
+
+      <dt>Object Numbers</dt>
+      <dd>Persistent and middle-weight objects are assigned globally unique
+      object numbers. Objects can be found by number. Object numbers are
+      essential in avoiding automatic duplication of middle-weight objects when
+      referencing them across execution rounds.</dd>
+
+      <dt>Inventory System</dt>
+      <dd>Classic inventory system with inventories, environments, and
+      vetoable object movement. Only persistent objects can be environments.
+      Moving an object from one environment to another is an atomic operation.
+      Environments fascilitate middle-weight objects.</dd>
+
+      <dt>Program Database</dt>
+      <dd>The object manager tracks all program issues in the mud, including
+      the kernel and system auto objects. The program issues can be explored as
+      a directory tree using the <code>pls</code> command.</dd>
+
+      <dt>Creator Arguments</dt>
+      <dd>Pass arguments to the <code>create()</code> function when creating
+      persistent clones and light-weight objects.</dd>
+
+      <dt>Hidden Master Objects</dt>
+      <dd>The master objects of clonable and light-weight objects are hidden.
+      Like inheritable objects, they cannot be found or called by name.</dd>
+
+      <dt>Atomic Object Creation</dt>
+      <dd>An object can undo its creation by raising an error in the
+      <code>create()</code> function.</dd>
+
+      <dt>Restrictions on Undefined Functions</dt>
+      <dd>Only inheritable objects can have undefined functions. (For now, this
+      also means that objects with undefined functions cannot be privately
+      inherited.)</dd>
+
+      <dt>Idiomatic Design</dt>
+      <dd>Designed with multi-processing and swapping in mind.</dd>
+    </dl>
+    <p>The Leprechaun distribution also includes a game library under
+    development, intended to showcase the features of the system library. The
+    game library currently has the following features:</p>
+    <ul>
+      <li>The game objects consist of rooms, creatures, and items. Items are
+      further refined into weapons, armor pieces, containers, and heaps.</li>
+      <li>Command parser for game commands. It generates action objects. Action
+      objects can also be created programmatically, for instance by an AI.</li>
+      <li>Action objects are enqueued in creatures.</li>
+      <li>Dynamic attribute system with bonuses from race, guild, and
+      equipment.</li>
+      <li>Various utility libraries of reusable functions.</li>
+    </ul>
+  </body>
+</head>

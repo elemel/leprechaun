@@ -1,0 +1,18 @@
+html, body {
+    color: black;
+    background-color: white;
+}
+
+body {
+    width: 40em;
+    margin: 1em auto;
+}
+
+img {
+  border: 0;
+}
+
+h1, h2, h3, dt {
+    color: green;
+    font-weight: bold;
+}
